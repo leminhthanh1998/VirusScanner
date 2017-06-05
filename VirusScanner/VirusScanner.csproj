@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C77AC042-1B58-4E7F-9AC9-A1F576C9360E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VirusScanner</RootNamespace>
+    <AssemblyName>VirusScanner</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Antivirus Scanner-96.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="bunifu_ui_v1.52">
+      <HintPath>C:\Users\lemin\Downloads\bunifu_ui_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="ClamAvManager.cs" />
+    <Compile Include="Database.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DetectVirus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetectVirus.Designer.cs">
+      <DependentUpon>DetectVirus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKhoiphuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhoiphuc.Designer.cs">
+      <DependentUpon>frmKhoiphuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCachly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCachly.Designer.cs">
+      <DependentUpon>frmCachly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageBox.cs" />
+    <Compile Include="Quarantine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quarantine.Designer.cs">
+      <DependentUpon>Quarantine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuetThuMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuetThuMuc.Designer.cs">
+      <DependentUpon>QuetThuMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuetFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuetFile.Designer.cs">
+      <DependentUpon>QuetFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXoaFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXoaFile.Designer.cs">
+      <DependentUpon>frmXoaFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongBao.Designer.cs">
+      <DependentUpon>ThongBao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DetectVirus.resx">
+      <DependentUpon>DetectVirus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhoiphuc.resx">
+      <DependentUpon>frmKhoiphuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCachly.resx">
+      <DependentUpon>frmCachly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quarantine.resx">
+      <DependentUpon>Quarantine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuetThuMuc.resx">
+      <DependentUpon>QuetThuMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuetFile.resx">
+      <DependentUpon>QuetFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXoaFile.resx">
+      <DependentUpon>frmXoaFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongBao.resx">
+      <DependentUpon>ThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Database.xsc">
+      <DependentUpon>Database.xsd</DependentUpon>
+    </None>
+    <None Include="Database.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Database.xss">
+      <DependentUpon>Database.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Antivirus Scanner-96.ico" />
+    <None Include="Resources\Ask Question-96.png" />
+    <None Include="Resources\Error-96.png" />
+    <None Include="Resources\Information-96.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
